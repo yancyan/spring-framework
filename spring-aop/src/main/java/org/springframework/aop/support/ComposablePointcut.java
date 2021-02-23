@@ -41,6 +41,9 @@ import org.springframework.util.Assert;
  * @since 11.11.2003
  * @see Pointcuts
  */
+/*
+ * 组合切入点，两种匹配模式：intersection and union.
+ */
 public class ComposablePointcut implements Pointcut, Serializable {
 
 	/** use serialVersionUID from Spring 1.2 for interoperability. */

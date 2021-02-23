@@ -36,6 +36,10 @@ import org.springframework.util.ObjectUtils;
  * @see AbstractAdvisingBeanPostProcessor
  * @see org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator
  */
+
+/**
+ * 为代理创建器提供公共方法.
+ */
 @SuppressWarnings("serial")
 public class ProxyProcessorSupport extends ProxyConfig implements Ordered, BeanClassLoaderAware, AopInfrastructureBean {
 
@@ -43,6 +47,7 @@ public class ProxyProcessorSupport extends ProxyConfig implements Ordered, BeanC
 	 * This should run after all other processors, so that it can just add
 	 * an advisor to existing proxies rather than double-proxy.
 	 */
+	// 优先级最低确保可以代理到其他被代理以后的对象，及代理包在最外层
 	private int order = Ordered.LOWEST_PRECEDENCE;
 
 	@Nullable
@@ -100,6 +105,10 @@ public class ProxyProcessorSupport extends ProxyConfig implements Ordered, BeanC
 	 * to filter for reasonable proxy interfaces, falling back to a target-class proxy otherwise.
 	 * @param beanClass the class of the bean
 	 * @param proxyFactory the ProxyFactory for the bean
+	 */
+	/**
+	 *  如果有正常的代理接口，交给ProxyFactory.
+	 *  评估代理类的实现接口，无接口则直接 proxyTargetClass = true， 使用CGLIb代理.
 	 */
 	protected void evaluateProxyInterfaces(Class<?> beanClass, ProxyFactory proxyFactory) {
 		Class<?>[] targetInterfaces = ClassUtils.getAllInterfacesForClass(beanClass, getProxyClassLoader());

@@ -33,6 +33,9 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * @see #setAdvisorAdapterRegistry
  * @see AdvisorAdapter
  */
+/*
+ * 通过BPP，将IOC容器中所有的AdvisorAdapter注册到 GlobalAdvisorAdapterRegistry中单例DefaultAdvisorAdapterRegistry中。
+ */
 public class AdvisorAdapterRegistrationManager implements BeanPostProcessor {
 
 	private AdvisorAdapterRegistry advisorAdapterRegistry = GlobalAdvisorAdapterRegistry.getInstance();

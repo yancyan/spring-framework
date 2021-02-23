@@ -37,6 +37,9 @@ import java.util.regex.PatternSyntaxException;
  * @author Rob Harrop
  * @since 1.1
  */
+/*
+ * 通过正则表达式匹配
+ */
 @SuppressWarnings("serial")
 public class JdkRegexpMethodPointcut extends AbstractRegexpMethodPointcut {
 

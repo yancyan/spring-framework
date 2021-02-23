@@ -37,6 +37,9 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @author Sam Brannen
  */
+/*
+ * 根据在当前线程的堆栈信息中的方法名来决定是否切入某个方法（效率较低）
+ */
 @SuppressWarnings("serial")
 public class ControlFlowPointcut implements Pointcut, ClassFilter, MethodMatcher, Serializable {
 

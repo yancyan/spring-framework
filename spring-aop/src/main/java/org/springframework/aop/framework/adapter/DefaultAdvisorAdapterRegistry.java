@@ -37,6 +37,7 @@ import org.springframework.aop.support.DefaultPointcutAdvisor;
  * @author Rob Harrop
  * @author Juergen Hoeller
  */
+// 负责 Advisor -> MethodInterceptor.
 @SuppressWarnings("serial")
 public class DefaultAdvisorAdapterRegistry implements AdvisorAdapterRegistry, Serializable {
 
@@ -53,6 +54,11 @@ public class DefaultAdvisorAdapterRegistry implements AdvisorAdapterRegistry, Se
 	}
 
 
+	/*
+	 * Registry 核心功能
+	 *
+	 *
+	 */
 	@Override
 	public Advisor wrap(Object adviceObject) throws UnknownAdviceTypeException {
 		if (adviceObject instanceof Advisor) {

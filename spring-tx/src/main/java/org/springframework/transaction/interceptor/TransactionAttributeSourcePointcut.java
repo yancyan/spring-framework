@@ -33,6 +33,12 @@ import org.springframework.util.ObjectUtils;
  * @author Juergen Hoeller
  * @since 2.5.5
  */
+/*
+ * 通过 TransactionAttributeSource 在类的方法上提取事务注解的属性 @Transactional 来判断是否匹配,
+ * 提取到则说明匹配, 提取不到则说明匹配不成功
+ *
+ * {@link org.springframework.transaction.annotation.Transactional}` Pointcut.
+ */
 @SuppressWarnings("serial")
 abstract class TransactionAttributeSourcePointcut extends StaticMethodMatcherPointcut implements Serializable {
 

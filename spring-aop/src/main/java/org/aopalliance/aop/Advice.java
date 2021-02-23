@@ -23,6 +23,14 @@ package org.aopalliance.aop;
  * @author Rod Johnson
  * @version $Id: Advice.java,v 1.1 2004/03/19 17:02:16 johnsonr Exp $
  */
+
+/*
+ * 拦截行为
+ * Advice: 其主要分成两类：普通advice 与Interceptor/MethodInterceptor：
+ * MethodBeforeAdvice, AfterReturningAdvice, AspectJAroundAdvice
+ *
+ *
+ */
 public interface Advice {
 
 }

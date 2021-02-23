@@ -44,9 +44,18 @@ import org.springframework.lang.Nullable;
  * @author Adrian Colyer
  * @since 2.0.3
  */
+/*
+ * 主要定义了从 Advised中获取 Advisor 并判断其是否与 对应的 Method 相匹配, 最终返回的是MethodInterceptor
+ *
+ */
 @SuppressWarnings("serial")
 public class DefaultAdvisorChainFactory implements AdvisorChainFactory, Serializable {
 
+	/*
+	 * 获取匹配 targetClass 与 method 的所有切面的通知
+	 *
+	 *
+	 */
 	@Override
 	public List<Object> getInterceptorsAndDynamicInterceptionAdvice(
 			Advised config, Method method, @Nullable Class<?> targetClass) {

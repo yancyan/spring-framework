@@ -31,6 +31,9 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 3.2
  */
+/*
+ *
+ */
 @SuppressWarnings("serial")
 public abstract class AbstractAdvisingBeanPostProcessor extends ProxyProcessorSupport implements BeanPostProcessor {
 

@@ -33,6 +33,11 @@ import org.aopalliance.aop.Advice;
  * @author Rod Johnson
  * @author Juergen Hoeller
  */
+
+/*
+ *	Advice And Pointcut Adaptor.
+ * 	同时持有Advice及Pointcut
+ */
 public interface Advisor {
 
 	/**

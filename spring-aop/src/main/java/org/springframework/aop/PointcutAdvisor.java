@@ -23,6 +23,9 @@ package org.springframework.aop;
  *
  * @author Rod Johnson
  */
+/*
+ * Advice Pointcut.
+ */
 public interface PointcutAdvisor extends Advisor {
 
 	/**

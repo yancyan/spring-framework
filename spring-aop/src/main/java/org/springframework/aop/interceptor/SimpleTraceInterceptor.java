@@ -34,6 +34,7 @@ import org.springframework.util.Assert;
  * @since 1.2
  * @see CustomizableTraceInterceptor
  */
+// 内置日志跟踪拦截器
 @SuppressWarnings("serial")
 public class SimpleTraceInterceptor extends AbstractTraceInterceptor {
 

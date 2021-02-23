@@ -41,6 +41,10 @@ import org.springframework.lang.Nullable;
  * @author Rod Johnson
  * @author Juergen Hoeller
  */
+/*
+ * 将当前 MethodInvocation 放到当前线程对应的 ThreadLoadMap里面的, 这是一个默认的 Interceptor,
+ * 在AspectJAwareAdvisorAutoProxy获取何时的 Advisor 时会调用自己的 extendAdvisors 方法, 从而将 ExposeInvocationInterceptor 方法执行链表的第一位
+ */
 @SuppressWarnings("serial")
 public final class ExposeInvocationInterceptor implements MethodInterceptor, PriorityOrdered, Serializable {
 

@@ -24,6 +24,9 @@ package org.springframework.aop.framework.adapter;
  * @author Phillip Webb
  * @see DefaultAdvisorAdapterRegistry
  */
+/*
+ * 维护一个 AdvisorAdapterRegistry 单例
+ */
 public final class GlobalAdvisorAdapterRegistry {
 
 	private GlobalAdvisorAdapterRegistry() {

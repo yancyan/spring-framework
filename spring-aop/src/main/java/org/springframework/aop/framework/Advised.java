@@ -35,6 +35,11 @@ import org.springframework.aop.TargetSource;
  * @since 13.03.2003
  * @see org.springframework.aop.framework.AdvisedSupport
  */
+/*
+ * aop代理类实现接口，代理类可以被转换为此类型，进行代理行为控制。
+ * 不管是JDK Proxy还是CGLib Proxy的代理对象，都实现了此接口
+ *
+ */
 public interface Advised extends TargetClassAware {
 
 	/**

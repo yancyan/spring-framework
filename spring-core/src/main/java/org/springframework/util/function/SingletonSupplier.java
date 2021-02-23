@@ -34,6 +34,9 @@ import org.springframework.util.Assert;
  * @since 5.1
  * @param <T> the type of results supplied by this supplier
  */
+/*
+ * 单例构造，适用于非全局单例场景。
+ */
 public class SingletonSupplier<T> implements Supplier<T> {
 
 	@Nullable

@@ -89,6 +89,10 @@ import org.springframework.util.StringUtils;
  * @see BeanNameAutoProxyCreator
  * @see DefaultAdvisorAutoProxyCreator
  */
+/*
+ * 实现了 创建代理类的主方法 createProxy 方法
+ * 定义了抽象方法 getAdvicesAndAdvisorsForBean**(获取 Bean对应的 Advisor)**
+ */
 @SuppressWarnings("serial")
 public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 		implements SmartInstantiationAwareBeanPostProcessor, BeanFactoryAware {
@@ -572,6 +576,9 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
 	 * @throws BeansException in case of errors
 	 * @see #DO_NOT_PROXY
 	 * @see #PROXY_WITHOUT_ADDITIONAL_INTERCEPTORS
+	 */
+	/*
+	 * 得到切入点在此类上的所有MethodInterceptor。
 	 */
 	@Nullable
 	protected abstract Object[] getAdvicesAndAdvisorsForBean(Class<?> beanClass, String beanName,

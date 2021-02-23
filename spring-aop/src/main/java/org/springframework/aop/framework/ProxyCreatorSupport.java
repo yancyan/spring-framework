@@ -29,6 +29,10 @@ import org.springframework.util.Assert;
  * @since 2.0.3
  * @see #createAopProxy()
  */
+/*
+ * 注册和触发监听器，并通过AopProxyFactory获得代理对象.
+ *
+ */
 @SuppressWarnings("serial")
 public class ProxyCreatorSupport extends AdvisedSupport {
 

@@ -36,6 +36,10 @@ import org.springframework.util.PatternMatchUtils;
  * @since 11.02.2004
  * @see #isMatch
  */
+/*
+ * 通过方法名进行精确匹配 或 满足 PatternMatchUtils.simpleMatch(mappedName, methodName)
+ *
+ */
 @SuppressWarnings("serial")
 public class NameMatchMethodPointcut extends StaticMethodMatcherPointcut implements Serializable {
 
